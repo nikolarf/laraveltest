@@ -17,4 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('contact', 'MyController@contact');
+Route::get('contact', 'MyController@index');
+Route::get('about', function () {
+	$data = "<p>Here is my Data</p>";
+    return view('about', compact('data'));
+});
