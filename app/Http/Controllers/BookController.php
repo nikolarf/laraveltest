@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Book;
 
 class BookController extends Controller
 {
@@ -12,8 +13,9 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   
+        $books = Book::all();
+        return view('book.index', compact('books'));
     }
 
     /**
@@ -23,7 +25,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        return view('book.create');
     }
 
     /**
@@ -34,7 +36,8 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Book::create($request->all()); 
+        return redirect('book');  
     }
 
     /**
@@ -44,8 +47,9 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        $book = Book::findOrFail($id);
+        return view('book.show', compact('book'));
     }
 
     /**
