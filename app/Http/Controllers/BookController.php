@@ -59,8 +59,11 @@ class BookController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+
+        $book = Book::findOrFail($id);
+
+        return view('book.edit', compact('book'));
     }
 
     /**
@@ -83,6 +86,8 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $book = Book::findOrFail($id);
+        $book->delete();
+        return back();
     }
 }
