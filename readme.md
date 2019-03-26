@@ -1,3 +1,6 @@
+<p>Code inspire</p>
+<p>https://www.youtube.com/channel/UCnj1BK9TU32-bOlZ9415fuw</p>
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
