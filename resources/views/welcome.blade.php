@@ -1,4 +1,7 @@
 <!doctype html>
+@php
+    //phpinfo();
+@endphp
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -81,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    LaravelTestNew
+                    Laracast
                 </div>
 
                 <div class="links">
